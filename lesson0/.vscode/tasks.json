@@ -8,6 +8,13 @@
                 "-fcolor-diagnostics",
                 "-fansi-escape-codes",
                 "-g",
+                "-pedantic-errors",
+                "-Wall",
+                "-Weffc++",
+                "-Wextra",
+                "-Wconversion",
+                "-Wsign-conversion",
+                "-Werror",
                 "${file}",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
