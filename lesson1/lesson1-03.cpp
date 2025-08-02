@@ -9,5 +9,7 @@ int main()
 
     // std::cout << '';   // will cause a compiler error
 
+    int x;                // this is a defined variable. The object is created when the var is stored in memory.
+
     return 0;
 }
