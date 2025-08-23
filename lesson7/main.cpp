@@ -16,7 +16,7 @@ namespace Foo
 int main() {
     std::string s = "Hi";
 
-    print(s);
+    ::print(s);
     Foo::print(s);
 
     return 0;
