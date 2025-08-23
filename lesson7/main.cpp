@@ -1,4 +1,5 @@
 #include <iostream>
+#include "add.h"
 
 void print(std::string& str)
 {
@@ -11,6 +12,14 @@ namespace Foo
     {
         std::cout << "This string is from the Foo namespace: " << str << "\n";
     }
+
+    namespace Goo
+    {
+        void deep()
+        {
+            std::cout << "This is inside Foo-->Goo\n";
+        }
+    }
 }
 
 int main() {
@@ -18,6 +27,9 @@ int main() {
 
     ::print(s);
     Foo::print(s);
+    Foo::Goo::deep();
+
+    std::cout << BasicMath::add(5, 10) << "\n"; 
 
     return 0;
 }
