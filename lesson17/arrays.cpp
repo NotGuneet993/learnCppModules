@@ -32,8 +32,11 @@ int main() {
     // use .get() to change the object
     arrRefs[1].get() = 100;
     std::cout << "changed item: " << arrRefs[1] << "\n";
-    std::cout << "'y' is : " << y << "\n";
+    std::cout << "'y' is : " << y << "\n"; 
 
+    // you can init an array like this;
+    std::array<int, 5> emptyArr;
+    for (auto &x : emptyArr) x = 0;
 
     // does this work? yes
     std::array<int, 3> test {1, 2, 3};
@@ -41,6 +44,13 @@ int main() {
     test = {0, 0, 0};                               // you can add less that the allocated items # but you cannot add more. 
     for (auto x : test) std::cout << x << " ";
 
+    
+    // c-style arrays 
+    int arrC[] {1, 2, 3};        // this automtically figures out the size. I could do name[size]; 
+    int arrC2d[5][5];              // this makes a 2d arr. the layout is [rows][columns]
+
+    // 2d arrays are like vectors 
+    std::array<std::array<int, 4>, 2> Arr2d {};     // 2 rows and 4 cols of all 0s 
 
     return 0;
 }
